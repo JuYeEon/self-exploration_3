@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main</title>
+</head>
+<body>
+  <div id="container">    
+    <header>
+      <nav>
+        <ul id="topMenu">
+          <li><a href="2.html">login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>WELCOME!</h1>
+    </main>
+    <footer>    
+      <table>
+          <tr>
+            <td><input type="text" id="key" placeholder="KEY"></td>
+          </tr>  
+          <tr>
+            <td><input type="button" value="Check" class="btn" onclick="validateForm()"></td>
+        </tr>
+      </table>
+    </footer>  
+  </div> 
+  <script>
+    function validateForm() {
+        const key = document.getElementById("key").value;
+
+        if (key === "10293132") {
+            alert("성공");
+        } else {
+            alert("틀린 key값입니다.");
+        }
+    }
+  </script>
+</body>
+</html>
+//python -m http.server 7000
+//http://localhost:7000/1.html

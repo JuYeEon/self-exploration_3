@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td><h2>로그인</h2></td>
+    </tr>
+    <tr>
+        <td>
+            <form id="loginForm" onsubmit="return validateForm()">
+                <table>
+                    <tr>
+                        <td><input type="text" id="userID" placeholder="ID"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" id="userPW" placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Sign in" class="btn"></td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+</table>
+
+<script>
+    function validateForm() {
+        const userID = document.getElementById("userID").value;
+        const userPW = document.getElementById("userPW").value;
+        if (userID === "guest" && userPW === "guest") {
+            document.cookie = "user=guest; path=/; max-age=10";
+            window.location.replace("3.html");
+            return false;
+        } else {
+            alert("없는 유저 입니다.");
+            return false; 
+        }
+    }
+</script>
+
+</body>
+</html>
