@@ -1,1 +1,1 @@
-# self-exploration_3
+# 3학년 자율탐구 
